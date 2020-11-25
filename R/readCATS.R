@@ -1,3 +1,15 @@
+#' \code{readDiary} Reading csv file of CATS diary data
+#' @param filename NAme of file to be read (can be \code{file.choose()} to interactivelo select file)
+#' @details Reads standard diary data collected by CATS data loggers, saved as a csv file
+#' @returns Returns a tibble with all data stored in file
+#' @family CATS data reading and manipulation functions
+#' @author Martin Biuw
+#' @examples
+#' dat <- readDiary(file.choose())
+#'
+#' @imports tidyverse
+#' @export
+
 readDiary <- function(filename) {
   require(tidyverse)
   diary <- readr::read_csv(filename)
