@@ -67,7 +67,7 @@ readCATS <- function(folder='choose',
                      date.format=NA, plotting=T) {
   
   if(folder=='choose') {
-    cats.dir <- choose.dir(default = "C:/Users/a5406/Documents/Utilities/CATS/Diary/20201125", caption = "Select folder")
+    cats.dir <- rstudioapi::selectDirectory()
   } else {
     cats.dir <- setwd(folder)
   }
